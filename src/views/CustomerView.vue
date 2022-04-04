@@ -30,24 +30,37 @@
           </div>
         </div>
         <div class="container-body" style="width: 705px; margin: 20px auto">
-          <h3>Tổng số lượng khách hàng (30)</h3>
-          <div class="card w100 border-radius bg-white-1">
-            <div class="f jcb border-bottom pt1 pb1 pr1 pl1">
+          <h3 class="gray">Tổng số lượng khách hàng (30)</h3>
+          <div v-for="item in data" :key="item" class="card w100 mt1 border-radius bg-white-1">
+            <div class="f jcb aic border-bottom pt1 pb1 pr1 pl1">
               <div>
-                <h3>0123456789</h3>
-                <h5>nguyenthibillxinhgai@gmail.com</h5>
+                <h3 class="brown">0123456789</h3>
+                <h5 class="gray">nguyenthibillxinhgai@gmail.com</h5>
               </div>
-              <div>
+              <div class="p4 blue">
                 Xem chi tiết
               </div>
             </div>
-            <div>
-
+            <div class="f fdc mb1 pt1 pr1 pl1">
+              <div class="f jcb aic mb1">
+                <h6 class="gray">Tên khách hàng</h6>
+                <p4 class="black">{{item.name}}</p4>
+              </div>
+              <div class="f jcb aic mb1">
+                <h6 class="gray">Ghi chú</h6>
+                <p4 class="black">{{item.note}}</p4>
+              </div>
+              <div class="f jcb aic mb1">
+                <h6 class="gray">Địa chỉ dặt hàng</h6>
+                <p4 class="black">{{item.adress}}</p4>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <Login></Login>
 
     <div class="hide">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,14 +76,39 @@
 <script>
 import HeaderView from '@/components/HeaderView.vue'
 import SidebarView from '@/components/SidebarView.vue'
+import Login from '@/components/LoginView.vue'
+
 export default {
   components: {
     HeaderView,
     SidebarView,
+    Login,
+  },
+  data() {
+    return {
+      data: [
+        {
+          name: "Lê Bá Hoàng Long",
+          note: "Gọi điện cho khách",
+          adress: "Mễ Trì Hà Nội"
+        },
+        {
+          name: "Nguyễn Thị Bill",
+          note: "Không có ghi chú nào",
+          adress: "Tòa nhà ABC đường XYZ, Phường AAA, Quận BBB, Hà Nội"
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style>
+.card {
+  box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+}
 
+.active {
+  display: flex;
+}
 </style>

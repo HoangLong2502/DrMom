@@ -10,23 +10,24 @@
           </div>
       </div>
       <div class="header-right f aic">
-        <div class="header__noti">
+        <div class="header__noti mr15">
           <img src="../assets/Header/Bell.png" alt="">
         </div>
-        <div class="header__info f aic h100 bg-gray-2">
+        <div class="header__info f fdc jcb mr1 h100 border-left border-right pt075 pb075 pl1 pr1 bg-gray-2">
           <div>
-            <p>Số dư</p>
-            <p>Ví BZI</p>
+            <p class="p-small gray mb05">Số dư</p>
           </div>
-          <div>
-            <div>
-              Đ
+          <div class="f jcb aic">
+            <div class="border-radius align-c bg-brown white" style="width: 20px; height: 20px">
+              <p7>Đ</p7>
             </div>
-            <p>10,660,800</p>
+            <p class="p4 ml1 black">10,660,800</p>
           </div>
         </div>
-        <div class="header__account">
-
+        <div @click="handleLogin" class="header__account f aic mr4 cursor">
+          <img src="../assets/Header/account_circle.png" class="mr1">
+          <p4 class="black mr1">Nguyễn Văn Bill</p4>
+          <img src="../assets/Header/Down.png" alt="">
         </div>
       </div>
   </div>
@@ -34,7 +35,12 @@
 
 <script>
 export default {
-
+  methods: {
+    handleLogin() {
+      var login = document.querySelector('.auth');
+      login.classList.toggle('active')
+    }
+  }
 }
 </script>
 

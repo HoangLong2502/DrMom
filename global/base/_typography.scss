@@ -107,6 +107,18 @@ h6 {
   @extend %h6;
 }
 
+%h7 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.h7,
+h7 {
+  @extend %h7;
+}
+
 .label,
 label {
   @extend %h6;
@@ -150,7 +162,7 @@ p3 {
 
 %p4 {
   font-style: normal;
-  font-weight: SemiBold;
+  font-weight: 600;
   font-size: 14px;
   line-height: 21px;
 }
@@ -182,6 +194,18 @@ p5 {
 .p6,
 p6 {
   @extend %p6;
+}
+
+%p7 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 9px;
+}
+
+.p7,
+p7 {
+  @extend %p7;
 }
 
 %p {
@@ -243,7 +267,7 @@ p {
 }
 
 .border-left {
-  border-left: 2px solid $c-border;
+  border-left: 1px solid $c-border;
 }
 
 .border-left-1 {
