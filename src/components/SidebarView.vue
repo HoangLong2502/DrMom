@@ -1,11 +1,13 @@
 <template>
     <div class="sidebar w15 h100vh pr2 pt15 bg-white-1">
-            <div v-for="item in sidebar" :key="item" class="sidebar__item cursor f ai w100 pl15 pt1 pb1">
-                <svg viewBox="0 0 18 16" class="w10 mr15">
-                    <use xlink="http://www.w3.org/2000/svg" :href="(item.id)" x="0" y="0"></use>
-                </svg>
-                <p class="p5 gray-1-text">{{item.name}}</p>
-            </div>
+            <router-link to="/customer">
+                <div v-for="item in sidebar" :key="item" class="sidebar__item cursor f ai w100 pl15 pt1 pb1">
+                    <svg viewBox="0 0 18 16" class="w10 mr15">
+                        <use xlink="http://www.w3.org/2000/svg" :href="(item.id)" x="0" y="0"></use>
+                    </svg>
+                    <p class="p5 gray-1-text">{{item.name}}</p>
+                </div>
+            </router-link>
 
         <div class="hide">
             <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
