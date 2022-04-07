@@ -3,6 +3,8 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import CustomerView from '../views/CustomerView.vue'
 import HomeView from '../views/HomeView.vue'
 import ListCustomerView from '../components/CustomerView/ListCustomerView.vue'
+import AddCustomer from '../components/CustomerView/AddCustomer/AddCustomer.vue'
+import DetailCustomer from '../components/CustomerView/DetailCustomer/DetailCustomerView.vue'
 
 
 Vue.use(VueRouter)
@@ -19,9 +21,19 @@ const routes: Array<RouteConfig> = [
     component: CustomerView,
     children: [
       {
-        path: "/customer",
+        path: "/:id",
         name: 'customer',
         component: ListCustomerView,
+      },
+      {
+        path: "/customer/add",
+        name: "addcustomer",
+        component: AddCustomer
+      },
+      {
+        path: "/customer/:id",
+        name: 'customerdetail',
+        component: DetailCustomer,
       }
     ]
   },
@@ -33,11 +45,6 @@ const routes: Array<RouteConfig> = [
   //     list: ListCustomerView,
   //   }
   // },
-  {
-    path: '/customer/:id',
-    name: 'customer',
-    component: CustomerView
-  },
 ]
 
 const router = new VueRouter({

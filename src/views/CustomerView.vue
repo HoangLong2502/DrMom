@@ -3,7 +3,6 @@
     <HeaderView></HeaderView>
     <div class="f">
       <SidebarView></SidebarView>
-      <ListCustomerView class="hide"></ListCustomerView>
       <router-view/>
     </div>
 
@@ -24,7 +23,6 @@
 import HeaderView from '@/components/HeaderView.vue'
 import SidebarView from '@/components/SidebarView.vue'
 import Login from '@/components/LoginView.vue'
-import ListCustomerView from '@/components/CustomerView/ListCustomerView.vue'
 
 export default {
   components: {
@@ -32,7 +30,7 @@ export default {
     HeaderView,
     SidebarView,
     Login,
-    ListCustomerView
+
   },
   data() {
     return {

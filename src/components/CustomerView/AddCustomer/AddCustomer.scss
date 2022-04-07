@@ -1,0 +1,23 @@
+textarea {
+    resize: none;
+    border: 1px solid #D9DDE8;
+    border-radius: 4px;
+    font-family: 'Barlow';
+}
+
+.container {
+    width: 576px !important;
+}
+
+::placeholder {
+    color: #757575;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+input {
+    padding: 0.75em;
+}

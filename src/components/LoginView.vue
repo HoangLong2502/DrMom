@@ -17,10 +17,10 @@
               <div class="f jcb aic mb1">
                   <div class="f aic">
                       <input type="checkbox" name="" id="">
-                      <p>Nhớ tài khoản</p>
+                      <p class="ml05 h6">Nhớ tài khoản</p>
                   </div>
                   <div style="text-decoration-line:underline">
-                      <p>Quên mật khẩu</p>
+                      <p class="h6 gray">Quên mật khẩu</p>
                   </div>
               </div>
               <button class="w100 h5 pt075 pb075 align-c border-radius bg-brown white">Đăng nhập</button>
@@ -72,8 +72,7 @@
 export default {
     methods: {
         handleClose() {
-            var auth = document.querySelector('.auth');
-            auth.classList.remove('active')
+            document.querySelector('.auth').classList.remove('active');
         },
         handleRegister() {
             var login = document.querySelector('.login');
@@ -112,5 +111,17 @@ export default {
 
 .visible {
     display: none !important;
+}
+
+input {
+    padding: 8px;
+}
+
+::placeholder {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
 }
 </style>

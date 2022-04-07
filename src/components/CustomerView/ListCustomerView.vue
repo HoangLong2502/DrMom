@@ -1,5 +1,5 @@
 <template>
-    <div class="container w85 pt1 pb1 pl4 pr4">
+    <div class="container w85">
         <div class="container-header f aic mb2">
           <div class="h2 pr1 border-right">
             Khách hàng
@@ -17,17 +17,22 @@
               </svg>
               <h5>Chăm sóc khách hàng</h5>  
             </button>
-            <button class="f aic pt075 pb075 pr1 pl1 border-radius white bg-brown">
-              <svg width="14" height="15" viewBox="0 0 14 15" class="mr05">
-                <use xlink="http://www.w3.org/2000/svg" href="#more" x="0" y="0"></use>
-              </svg>
-              <h5>Thêm khách hàng</h5>
-            </button>
+            <router-link to="/customer/add">
+              <button class="f aic pt075 pb075 pr1 pl1 border-radius white bg-brown">
+                <svg width="14" height="15" viewBox="0 0 14 15" class="mr05">
+                  <use xlink="http://www.w3.org/2000/svg" href="#more" x="0" y="0"></use>
+                </svg>
+                <h5>Thêm khách hàng</h5>
+              </button>
+            </router-link>
           </div>
         </div>
         <div class="container-body" style="width: 705px; margin: 20px auto">
-          <h3 class="gray">Tổng số lượng khách hàng (30)</h3>
-          <router-link :to="{ name: 'customer', params: { id: item.id} }" v-for="item in data" :key="item">
+          <h3 class="gray">
+            <span>Tổng số lượng khách hàng </span>
+            <span style="color: #FF8A00;">(30)</span>
+          </h3>
+          <router-link :to="{ name: 'customerdetail', params: { id: item.id} }" v-for="item in data" :key="item">
             <div class="card w100 mt1 border-radius bg-white-1">
               <div class="f jcb aic border-bottom pt1 pb1 pr1 pl1">
                 <div>
@@ -80,6 +85,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.container {
+  width: 85%;
+  padding: 2em 7em; ;
+}
 </style>

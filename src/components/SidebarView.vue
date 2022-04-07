@@ -1,14 +1,13 @@
 <template>
     <div class="sidebar w15 h100vh pr2 pt15 bg-white-1">
-            <router-link to="/customer">
                 <div v-for="item in sidebar" :key="item" class="sidebar__item cursor f ai w100 pl15 pt1 pb1">
-                    <svg viewBox="0 0 18 16" class="w10 mr15">
+                    <svg viewBox="0 0 20 16" class="w10 mr15">
                         <use xlink="http://www.w3.org/2000/svg" :href="(item.id)" x="0" y="0"></use>
                     </svg>
-                    <p class="p5 gray-1-text">{{item.name}}</p>
+                    <router-link :to="{ name: 'customer', params: { id: item.url }}">
+                        <p  @click="getData" class="p5 gray-1-text">{{item.name}}</p>
+                    </router-link>
                 </div>
-            </router-link>
-
         <div class="hide">
             <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="homeSvg" d="M17.8125 6.75L10.0938 0.40625C9.8125 0.15625 9.40625 0.03125 9 0.03125C8.5625 0.03125 8.15625 0.15625 7.875 0.40625L0.15625 6.75C0.0625 6.84375 0 6.96875 0 7.125C0 7.25 0.03125 7.375 0.09375 7.4375L0.4375 7.84375C0.5 7.9375 0.65625 8 0.8125 8C0.9375 8 1.03125 7.96875 1.125 7.90625L2 7.1875V9H1.96875V15.5C1.96875 15.7812 2.1875 16 2.46875 16H15.5C15.75 16 16 15.7812 16 15.5V7.1875L16.8438 7.90625C16.9375 7.96875 17.0312 8.03125 17.1562 8.03125C17.3125 8.03125 17.4688 7.9375 17.5625 7.84375L17.875 7.4375C17.9375 7.375 18 7.25 18 7.125C18 6.96875 17.9062 6.84375 17.8125 6.75ZM14.5 7H14.4688V14.5H11V10C11 9.46875 10.5312 9 10 9H8C7.4375 9 7 9.46875 7 10V14.5H3.46875V6.09375H3.5V5.96875L9 1.4375L14.5 5.96875V7Z" fill="#6F382B"/>
@@ -51,56 +50,90 @@ export default {
             sidebar: [
                 {
                     name: "Tổng quát",
-                    id: "#homeSvg"
+                    id: "#homeSvg",
+                    url: "home"
                 },
                 {
                     name: "User",
-                    id: "#userSvg"
+                    id: "#userSvg",
+                    url: "user"
                 },
                 {
                     name: "Sản phẩm",
-                    id: "#productSvg"
+                    id: "#productSvg",
+                    url: "product"
                 },
                 {
                     name: "Khách hàng",
-                    id: "#cusSvg"
+                    id: "#cusSvg",
+                    url: "customer"
                 },
                 {
                     name: "Đơn hàng",
-                    id: "#itemSvg"
+                    id: "#itemSvg",
+                    url: "user"
                 },
                 {
                     name: "Quà tặng",
-                    id: "#giftSvg"
+                    id: "#giftSvg",
+                    url: "gift"
                 },
                 {
                     name: "Bài viết",
-                    id: "#postsSvg"
+                    id: "#postsSvg",
+                    url: "blog"
                 },
                 {
                     name: "Forum",
-                    id: "#forumSvg"
+                    id: "#forumSvg",
+                    url: "forum"
                 },
                 {
                     name: "Gian hàng",
-                    id: "#stallSvg"
+                    id: "#stallSvg",
+                    url: "user"
                 },
                 {
                     name: "Phễu",
-                    id: "#funnelSvg"
+                    id: "#funnelSvg",
+                    url: "user"
                 }
-            ]
+            ],
         }
-    }
+    },
+    watch: {
+       'link': function() {
+           console.log(this.link)
+       } 
+    },
+    methods: {
+        getData(event) {
+            const button = event.target.parentElement.parentElement;
+            const active = document.getElementsByClassName('active');
+            console.log(active);
+            if(active.length > 0) {
+                active[0].classList.remove('active')
+            }
+            button.classList.add('active');
+        }
+    },
 }
 </script>
 
-<style>
+<style scoped>
+.sidebar {
+    width: 253px !important;
+}
 .sidebar__item {
     transition: 0.2s;
 }
 
 .sidebar__item:hover {
+    background-color: #F1ECEA;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.active {
     background-color: #F1ECEA;
     border-radius: 0px 12px 12px 0px;
 }
