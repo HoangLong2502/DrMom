@@ -1,10 +1,10 @@
 <template>
-    <div class="sidebar w15 h100vh pr2 pt15 bg-white-1">
+    <div class="sidebar w15 pr2 pt15 bg-white-1">
                 <div v-for="item in sidebar" :key="item" class="sidebar__item cursor f ai w100 pl15 pt1 pb1">
                     <svg viewBox="0 0 20 16" class="w10 mr15">
                         <use xlink="http://www.w3.org/2000/svg" :href="(item.id)" x="0" y="0"></use>
                     </svg>
-                    <router-link :to="{ name: 'customer', params: { id: item.url }}">
+                    <router-link :to="item.url">
                         <p  @click="getData" class="p5 gray-1-text">{{item.name}}</p>
                     </router-link>
                 </div>
@@ -51,52 +51,52 @@ export default {
                 {
                     name: "Tổng quát",
                     id: "#homeSvg",
-                    url: "home"
+                    url: "/home"
                 },
                 {
                     name: "User",
                     id: "#userSvg",
-                    url: "user"
+                    url: "/user"
                 },
                 {
                     name: "Sản phẩm",
                     id: "#productSvg",
-                    url: "product"
+                    url: "/product"
                 },
                 {
                     name: "Khách hàng",
                     id: "#cusSvg",
-                    url: "customer"
+                    url: "/customer"
                 },
                 {
                     name: "Đơn hàng",
                     id: "#itemSvg",
-                    url: "user"
+                    url: "/user"
                 },
                 {
                     name: "Quà tặng",
                     id: "#giftSvg",
-                    url: "gift"
+                    url: "/gift"
                 },
                 {
                     name: "Bài viết",
                     id: "#postsSvg",
-                    url: "blog"
+                    url: "/blog"
                 },
                 {
                     name: "Forum",
                     id: "#forumSvg",
-                    url: "forum"
+                    url: "/forum"
                 },
                 {
                     name: "Gian hàng",
                     id: "#stallSvg",
-                    url: "user"
+                    url: "/user"
                 },
                 {
                     name: "Phễu",
                     id: "#funnelSvg",
-                    url: "user"
+                    url: "/user"
                 }
             ],
         }
@@ -123,6 +123,7 @@ export default {
 <style scoped>
 .sidebar {
     width: 253px !important;
+    height: calc(100vh);
 }
 .sidebar__item {
     transition: 0.2s;

@@ -5,6 +5,7 @@ import HomeView from '../views/HomeView.vue'
 import ListCustomerView from '../components/CustomerView/ListCustomerView.vue'
 import AddCustomer from '../components/CustomerView/AddCustomer/AddCustomer.vue'
 import DetailCustomer from '../components/CustomerView/DetailCustomer/DetailCustomerView.vue'
+import GiftView from '../components/GiftView/GiftView.vue'
 
 
 Vue.use(VueRouter)
@@ -21,7 +22,7 @@ const routes: Array<RouteConfig> = [
     component: CustomerView,
     children: [
       {
-        path: "/:id",
+        path: "/customer",
         name: 'customer',
         component: ListCustomerView,
       },
@@ -34,7 +35,12 @@ const routes: Array<RouteConfig> = [
         path: "/customer/:id",
         name: 'customerdetail',
         component: DetailCustomer,
-      }
+      },
+      {
+        path: "/gift",
+        name: 'gift',
+        component: GiftView,
+      },
     ]
   },
   // {

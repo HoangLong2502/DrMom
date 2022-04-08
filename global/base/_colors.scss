@@ -5,19 +5,21 @@
 .blue { color: $c-blue; }
 .blue-1 { color: #41BAF9; }
 
-.brown { color: #6F382B;}
+.brown { color: $c-brown;}
+.brown-1 { color: $c-brown-1;}
 .orange { color: $c-orange; }
 .green { color: $c-green; }
 .red-2 { color: #FF3B3B; }
 .red-1 { color: $c-red-1; }
-.red { color: $c-red-text; }
+.red { color: $c-error; }
 .gray { color: $c-dark-gray; }
 .gray-1-text { color: $c-gray-1-text; }
 
 /* Background Colors */
 .bg-black { background-color: $c-black; }
 .bg-gray { background-color: $c-gray-5; }
-.bg-brown { background-color: #6F382B;}
+.bg-brown { background-color:$c-brown; }
+.bg-brown-1 { background-color: $c-brown-1; }
 .bg-white-1 { background-color: white; }
 .bg-gray-1 { background-color: $c-dark-gray; }
 .bg-gray-2 { background-color: #F2F3F8; }

@@ -9,6 +9,8 @@
 </script>
 
 <style lang="scss">
-
+.block {
+    overflow: hidden !important
+};
 @import '/global/index';
 </style>

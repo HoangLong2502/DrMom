@@ -1,5 +1,5 @@
 <template>
-  <div class="container w85">
+  <div class="container relative w85">
       <div class="f aic mb2">
             <div class="pr1 h2 border-right">Khách hàng</div>
             <div class="p5 pr05 pl1 gray">Khách hàng</div>
@@ -107,7 +107,7 @@
         <div class="file">
             <div class="file__header f jcb aic mb15">
                 <p2 class="brown">Hồ sơ bệnh lý</p2>
-                <button class="h7 pt05 pb05 pl075 pr075 border-radius bg-brown white">Bổ sung hồ sơ</button>
+                <button @click="handleAddMedical" class="h7 pt05 pb05 pl075 pr075 border-radius bg-brown white">Bổ sung hồ sơ</button>
             </div>
             <div class="file__search relative mb15">
                 <div class="absolute" style="top: 35%; left: 2%">
@@ -192,6 +192,7 @@
 </template>
 
 <script>
+
 export default {
     data() {
         return {
@@ -216,6 +217,14 @@ export default {
                 },
 
             ]
+        }
+    },
+    methods: {
+        handleAddMedical() {
+            var medical = document.getElementsByClassName('add-medical')[0];
+            medical.classList.remove('hide');
+            var app = document.getElementById('app');
+            app.classList.add('block')
         }
     }
 }

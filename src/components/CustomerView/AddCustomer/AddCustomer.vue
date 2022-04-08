@@ -1,5 +1,5 @@
 <template>
-    <div class="w85 pt2 mb2">
+    <div class="container w85 pt2 mb2">
         <div class="f aic ml2 mb2">
             <div class="pr1 h2 border-right">Khách hàng</div>
             <div class="p5 pr05 pl1 gray">Khách hàng</div>
@@ -10,119 +10,121 @@
                 <h5 class="brown pl05">Thêm mới khách hàng</h5>
             </div>
         </div>
-        <div class="container jcc pt1 pb1 pr1 pl1 bg-white-1">
-            <div class="container__header mb1">
-                <h4 class="brown">Thêm mới khách hàng</h4>
-            </div>
-            <form class="form f fdc w100" action="">
-                <div class="info-basic w100 mb1">
-                    <div class="form__label h4 mb1">Thông tin cơ bản</div>
-                    <div class="f fdc ais mb1">
-                        <label class="h7 mb025" for="">Tên khách hàng</label>
-                        <input class="w100 pt075 pb075 pr075 pl075" type="text" placeholder="Nhập vào đây">
-                    </div>
-                    <div class="f jcb aic">
-                        <div class="f fdc">
-                            <label class="h7 mb025" for="">Email khách hàng</label>
-                            <input class="pt075 pb075 pr075 pl075" type="text" placeholder="Nhập vào đây">
-                        </div>
-                        <div class="f fdc">
-                            <label class="h7 mb025" for="">Số điện thoại khách hàng</label>
-                            <input class="pt075 pb075 pr075 pl075" type="text" placeholder="Nhập vào đây">
-                        </div>
-                    </div>
+        <div class="f jcc aic">
+            <div class="content jcc pt1 pb1 pr1 pl1 bg-white-1">
+                <div class="container__header mb1">
+                    <h4 class="brown">Thêm mới khách hàng</h4>
                 </div>
-                <div class="info-address mb1">
-                    <h5 class="mb1">Địa chỉ khách hàng</h5>
-                    <div class="f fdc aic mb1">
-                        <div class="w100 f jcb aic mb05">
-                            <label class="h7" for="">Địa chỉ 1</label>
-                            <div class="f aic">
-                                <h7 class="mr05">Mặc định</h7>
-                                <input type="radio">
+                <form class="form f fdc w100" action="">
+                    <div class="info-basic w100 mb1">
+                        <div class="form__label h4 mb1">Thông tin cơ bản</div>
+                        <div class="f fdc ais mb1">
+                            <label class="h7 mb025" for="">Tên khách hàng</label>
+                            <input class="w100 pt075 pb075 pr075 pl075" type="text" placeholder="Nhập vào đây">
+                        </div>
+                        <div class="f jcb aic">
+                            <div class="f fdc">
+                                <label class="h7 mb025" for="">Email khách hàng</label>
+                                <input class="pt075 pb075 pr075 pl075" type="text" placeholder="Nhập vào đây">
                             </div>
-                        </div>
-                        <input class="w100 pt075 pb075 pr075 pl075" type="text" placeholder="Nhập địa chỉ">
-                    </div>
-                    <div class="f fdc aic">
-                        <div class="f jcb aic w100 mb05">
-                            <label class="h7" for="">Địa chỉ 2</label>
-                            <h7 class="blue cursor">Đặt địa chỉ này làm mặc định</h7>
-                        </div>
-                        <input class="w100 pt075 pb075 pr075 pl075" type="text" placeholder="Nhập địa chỉ">
-                    </div>
-                </div>
-                <div class="info-social mb1">
-                    <h5 class="mb1">Mạng xã hội</h5>
-                    <div class="f jcb aic mb1">
-                        <img class="mr1" src="../../../assets/AddCustomerPNG/facebook.png" alt="">
-                        <input class="w90" type="text" placeholder="Nhập địa chỉ Facebook của khách hàng">
-                    </div>
-                    <div class="f jcb aic">
-                        <img class="mr1" src="../../../assets/AddCustomerPNG/zalo.png" alt="">
-                        <input class="w90" type="text" placeholder="Nhập địa chỉ Facebook của khách hàng">
-                    </div>
-                </div>
-                <div class="info-note f fdc mb1">
-                    <h7 class="mb05">Ghi chú</h7>
-                    <textarea class="border h6 pt075 pb075 pr075 pl075 border-radius" name="" id="" cols="30" rows="10" placeholder="Nhập ghi chú"></textarea>
-                </div>
-                <div class="info-related mb1">
-                    <div class="info-related__header w100 f jcb aic mb1">
-                        <h5>Thông tin người liên quan</h5>
-                        <div class="f aic">
-                            <svg width="14" height="15" viewBox="0 0 14 15" class="mr05 blue">
-                                <use xlink="http://www.w3.org/2000/svg" href="#more" x="0" y="0"></use>
-                            </svg>
-                            <h5 class="blue">Thêm thông tin</h5>
-                        </div>
-                    </div>
-                    <div class="info-related__list mb1">
-                        <div class="info-related__item f jcb aic">
-                            <div>
-                                <p4 class="mb025">
-                                    <span class="brown mr05">Nguyễn Văn A</span>
-                                    <span class="gray">(Bố/con)</span>
-                                </p4>
-                                <h6 class="gray">
-                                    0123456789
-                                </h6>
-                            </div>
-                            <div class="f aic">
-                                <svg width="18" height="15" viewBox="0 0 19 17" class="mr05">
-                                    <use xlink="http://www.w3.org/2000/svg" href="#note" x="0" y="0"></use>
-                                </svg>
-                                <svg width="14" height="15" viewBox="0 0 14 16" class="mr05">
-                                    <use xlink="http://www.w3.org/2000/svg" href="#bin" x="0" y="0"></use>
-                                </svg>
+                            <div class="f fdc">
+                                <label class="h7 mb025" for="">Số điện thoại khách hàng</label>
+                                <input class="pt075 pb075 pr075 pl075" type="text" placeholder="Nhập vào đây">
                             </div>
                         </div>
                     </div>
-                    <div class="info-medical">
-                        <h5 class="mb1">Hồ sơ bệnh lý</h5>
-                        <div class="medical__img mb1">
-                            <h7>Ảnh bệnh lý</h7>
-                            <div class="w100 f mt05 aic pt1 pb1 pl1 pr1 border-radius bg-gray-2" style="border: 1px dashed #D9DDE8;">
-                                <div class="h7 pt05 pb05 pr1 pl1 mr1 border-radius" style="border: 1px solid #D9DDE8;">
-                                    Tải ảnh lên
+                    <div class="info-address mb1">
+                        <h5 class="mb1">Địa chỉ khách hàng</h5>
+                        <div class="f fdc aic mb1">
+                            <div class="w100 f jcb aic mb05">
+                                <label class="h7" for="">Địa chỉ 1</label>
+                                <div class="f aic">
+                                    <h7 class="mr05">Mặc định</h7>
+                                    <input type="radio">
                                 </div>
+                            </div>
+                            <input class="w100 pt075 pb075 pr075 pl075" type="text" placeholder="Nhập địa chỉ">
+                        </div>
+                        <div class="f fdc aic">
+                            <div class="f jcb aic w100 mb05">
+                                <label class="h7" for="">Địa chỉ 2</label>
+                                <h7 class="blue cursor">Đặt địa chỉ này làm mặc định</h7>
+                            </div>
+                            <input class="w100 pt075 pb075 pr075 pl075" type="text" placeholder="Nhập địa chỉ">
+                        </div>
+                    </div>
+                    <div class="info-social mb1">
+                        <h5 class="mb1">Mạng xã hội</h5>
+                        <div class="f jcb aic mb1">
+                            <img class="mr1" src="../../../assets/AddCustomerPNG/facebook.png" alt="">
+                            <input class="w90" type="text" placeholder="Nhập địa chỉ Facebook của khách hàng">
+                        </div>
+                        <div class="f jcb aic">
+                            <img class="mr1" src="../../../assets/AddCustomerPNG/zalo.png" alt="">
+                            <input class="w90" type="text" placeholder="Nhập địa chỉ Facebook của khách hàng">
+                        </div>
+                    </div>
+                    <div class="info-note f fdc mb1">
+                        <h7 class="mb05">Ghi chú</h7>
+                        <textarea class="border h6 pt075 pb075 pr075 pl075 border-radius" name="" id="" cols="30" rows="10" placeholder="Nhập ghi chú"></textarea>
+                    </div>
+                    <div class="info-related mb1">
+                        <div class="info-related__header w100 f jcb aic mb1">
+                            <h5>Thông tin người liên quan</h5>
+                            <div class="f aic">
+                                <svg width="14" height="15" viewBox="0 0 14 15" class="mr05 blue">
+                                    <use xlink="http://www.w3.org/2000/svg" href="#more" x="0" y="0"></use>
+                                </svg>
+                                <h5 class="blue">Thêm thông tin</h5>
+                            </div>
+                        </div>
+                        <div class="info-related__list mb1">
+                            <div class="info-related__item f jcb aic">
                                 <div>
-                                    <p4>Bạn có thể thêm nhiều ảnh cùng lúc(tối đa: 10 ảnh)</p4>
-                                    <h6 class="gray">Dung lượng ảnh tối đa: 2MB</h6>
+                                    <p4 class="mb025">
+                                        <span class="brown mr05">Nguyễn Văn A</span>
+                                        <span class="gray">(Bố/con)</span>
+                                    </p4>
+                                    <h6 class="gray">
+                                        0123456789
+                                    </h6>
+                                </div>
+                                <div class="f aic">
+                                    <svg width="18" height="15" viewBox="0 0 19 17" class="mr05">
+                                        <use xlink="http://www.w3.org/2000/svg" href="#note" x="0" y="0"></use>
+                                    </svg>
+                                    <svg width="14" height="15" viewBox="0 0 14 16" class="mr05">
+                                        <use xlink="http://www.w3.org/2000/svg" href="#bin" x="0" y="0"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="medical__text w100 f fdc ais">
-                            <h7 class="mb05">Bổ sung hồ sơ</h7>
-                            <textarea class="border border-radius w100 h7 pt075 pb 075 pr075 pl075" name="" id="" cols="30" rows="10" placeholder="Giúp bạn chăm sóc khách hàng tốt hơn"></textarea>
+                        <div class="info-medical">
+                            <h5 class="mb1">Hồ sơ bệnh lý</h5>
+                            <div class="medical__img mb1">
+                                <h7>Ảnh bệnh lý</h7>
+                                <div class="w100 f mt05 aic pt1 pb1 pl1 pr1 border-radius bg-gray-2" style="border: 1px dashed #D9DDE8;">
+                                    <div class="h7 pt05 pb05 pr1 pl1 mr1 border-radius" style="border: 1px solid #D9DDE8;">
+                                        Tải ảnh lên
+                                    </div>
+                                    <div>
+                                        <p4>Bạn có thể thêm nhiều ảnh cùng lúc(tối đa: 10 ảnh)</p4>
+                                        <h6 class="gray">Dung lượng ảnh tối đa: 2MB</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="medical__text w100 f fdc ais">
+                                <h7 class="mb05">Bổ sung hồ sơ</h7>
+                                <textarea class="border border-radius w100 h7 pt075 pb 075 pr075 pl075" name="" id="" cols="30" rows="10" placeholder="Giúp bạn chăm sóc khách hàng tốt hơn"></textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="f jce">
-                    <button class="pt075 pb075 pl1 pr1 mr1 border-radius brown" style="border: 1px solid #6F382B">Hủy bỏ</button>
-                    <button class="pt075 pb075 pl1 pr1 border-radius white bg-brown">Thêm mới</button>
-                </div>
-            </form>
+                    <div class="f jce">
+                        <button class="pt075 pb075 pl1 pr1 mr1 border-radius brown" style="border: 1px solid #6F382B">Hủy bỏ</button>
+                        <button class="pt075 pb075 pl1 pr1 border-radius white bg-brown">Thêm mới</button>
+                    </div>
+                </form>
+            </div>
         </div>
 
         <div class="hide">
