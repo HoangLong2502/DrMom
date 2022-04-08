@@ -125,7 +125,7 @@
                 <div class="complate hide">
                     <div class="f fdc aic">
                         <img class="mb1" src="../assets/complate.png" alt="">
-                        <h2 class="mb2">Quý khách đã tạo mật khẩu<br>mới thành công! </h2>
+                        <h2 class="mb2 align-c gray">Quý khách đã tạo mật khẩu<br>mới thành công! </h2>
                         <button class="w100 h5 pt075 pb075 align-c border-radius bg-brown white">Xác nhận mã OTP</button>
                     </div> 
                 </div>

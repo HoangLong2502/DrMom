@@ -5,7 +5,7 @@
                         <use xlink="http://www.w3.org/2000/svg" :href="(item.id)" x="0" y="0"></use>
                     </svg>
                     <router-link :to="item.url">
-                        <p  @click="getData" class="p5 gray-1-text">{{item.name}}</p>
+                        <div  @click="getData" class="p5 gray-1-text">{{item.name}}</div>
                     </router-link>
                 </div>
         <div class="hide">
@@ -109,12 +109,16 @@ export default {
     methods: {
         getData(event) {
             const button = event.target.parentElement.parentElement;
+            const title = event.target;
             const active = document.getElementsByClassName('active');
+            const activeText = document.getElementsByClassName('active-text');
             console.log(active);
             if(active.length > 0) {
                 active[0].classList.remove('active')
+                activeText[0].classList.remove('active-text')
             }
             button.classList.add('active');
+            title.classList.add('active-text');
         }
     },
 }
@@ -137,5 +141,14 @@ export default {
 .active {
     background-color: #F1ECEA;
     border-radius: 0px 12px 12px 0px;
+}
+
+.active-text {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6F382B;
 }
 </style>
