@@ -149,13 +149,10 @@ export default {
     methods: {
         handleClose() {
             document.querySelector('.auth').classList.remove('active');
-            var login = document.querySelector('.login');
-            login.classList.remove('visible');
-            var register = document.querySelector('.register');
-            register.classList.remove('active');
+            this.handleLogin();
             var forgot = document.querySelector('.forgot-password');
             forgot.classList.remove('active')
-
+            this.handleBack();
         },
         handleRegister() {
             var login = document.querySelector('.login');
