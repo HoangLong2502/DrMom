@@ -107,7 +107,7 @@
                     </div>
                     <div class="f fdc mb2">
                         <label class="h7 mb05" for="">Mã OTP</label>
-                        <input class="h6" type="password" placeholder="Nhập mật khẩu vào đây">
+                        <input class="h6" type="type" placeholder="Nhập mã OTP đã gửi về số điện thoại của bạn">
                     </div>
                     <button class="w100 h5 pt075 pb075 align-c border-radius bg-brown white" @click="handleToNewPassword">Xác nhận mã OTP</button>
                 </form>

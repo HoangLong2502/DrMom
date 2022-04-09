@@ -108,7 +108,7 @@
                                         Tải ảnh lên
                                     </div>
                                     <div>
-                                        <p4>Bạn có thể thêm nhiều ảnh cùng lúc(tối đa: 10 ảnh)</p4>
+                                        <p4>Bạn có thể thêm nhiều ảnh cùng lúc (tối đa: 10 ảnh)</p4>
                                         <h6 class="gray">Dung lượng ảnh tối đa: 2MB</h6>
                                     </div>
                                 </div>

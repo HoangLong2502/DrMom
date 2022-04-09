@@ -6,6 +6,7 @@ import ListCustomerView from '../components/CustomerView/ListCustomerView.vue'
 import AddCustomer from '../components/CustomerView/AddCustomer/AddCustomer.vue'
 import DetailCustomer from '../components/CustomerView/DetailCustomer/DetailCustomerView.vue'
 import GiftView from '../components/GiftView/GiftView.vue'
+import ProductView from '../components/ProductView/ProductView.vue'
 
 
 Vue.use(VueRouter)
@@ -21,6 +22,11 @@ const routes: Array<RouteConfig> = [
     name: 'home1',
     component: CustomerView,
     children: [
+      {
+        path: "/product",
+        name: 'product',
+        component: ProductView,
+      },
       {
         path: "/customer",
         name: 'customer',

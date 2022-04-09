@@ -8,9 +8,6 @@
 
 </script>
 
-<style lang="scss">
-.block {
-    overflow: hidden !important
-};
+<style lang="scss"> 
 @import '/global/index';
 </style>

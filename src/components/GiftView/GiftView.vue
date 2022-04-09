@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="content__header f aic mb1">
-                    <p3 class="gray">Tổng số lượng quà tặng</p3>
+                    <p3 class="gray mr025">Tổng số lượng quà tặng</p3>
                     <p3 class="red">(3)</p3>
                 </div>
                 <div class="content__list">

@@ -1,0 +1,20 @@
+.product {
+
+    & .product-portfolio-notdata {
+        display: none;
+    }
+
+    & .product-list-notdata {
+        display: none;
+    }
+}
+
+.filter__item {
+    transition: 0.2s;
+}
+
+.select {
+    background-color: #6F382B;
+    color: #FFFFFF;
+}
+

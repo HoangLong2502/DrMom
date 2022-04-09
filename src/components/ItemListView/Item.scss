@@ -1,0 +1,51 @@
+
+.price-style {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #6F382B;
+}
+
+.on-sale {
+    padding: 8px 16px;
+    border-radius: 8px; 
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #69BE31;
+    background: #F0F9EB;
+}
+
+.stop-sale {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    border: 1px solid #D9DDE8;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #757575;
+}
+
+.width-fix {
+    width: 200px !important;
+}
+
+input {
+    border: 1px solid #757575;
+    padding: 0.5em;
+}
+
+.form-check-input:checked {
+    border:1px solid #6F382B !important;
+    background-color: #6F382B !important;
+}
+
+
+// css checkbox

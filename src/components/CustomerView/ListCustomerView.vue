@@ -44,11 +44,11 @@
                 </div>
               </div>
               <div class="f fdc mb1 pt1 pr1 pl1">
-                <div class="f jcb aic mb1">
+                <div class="f jcb aic mb05">
                   <h6 class="gray">Tên khách hàng</h6>
                   <p4 class="black">{{item.name}}</p4>
                 </div>
-                <div class="f jcb aic mb1">
+                <div class="f jcb aic mb05">
                   <h6 class="gray">Ghi chú</h6>
                   <p4 class="black">{{item.note}}</p4>
                 </div>
