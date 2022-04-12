@@ -2,16 +2,16 @@
   <div class="header f aic jcb w100 bg-white-1 border-bottom">
       <div class="header-left f aic">
           <div class="header-left__img pt1 pb1 pr15 pl15 border-right">
-            <img src="../assets/Header/LogoDrMom.png" alt="">
+            <img src="../../assets/Header/LogoDrMom.png" alt="">
           </div>
           <div class="header-left__text f aic pt1 pb1 pr15 pl15">
-            <img src="../assets/Header/language.png" alt="">
+            <img src="../../assets/Header/language.png" alt="">
             <p class="p-small blue ml1">Xem gian hàng</p>
           </div>
       </div>
       <div class="header-right f aic">
         <div class="header__noti mr15">
-          <img src="../assets/Header/Bell.png" alt="">
+          <img src="../../assets/Header/Bell.png" alt="">
         </div>
         <div class="header__info f fdc jcb mr1 h100 border-left border-right pt075 pb075 pl1 pr1 bg-gray-2">
           <div>
@@ -25,9 +25,9 @@
           </div>
         </div>
         <div @click="handleLogin" class="header__account f aic mr4 cursor">
-          <img src="../assets/Header/account_circle.png" class="mr1">
+          <img src="../../assets/Header/account_circle.png" class="mr1">
           <p4 class="black mr1">Nguyễn Văn Bill</p4>
-          <img src="../assets/Header/Down.png" alt="">
+          <img src="../../assets/Header/Down.png" alt="">
         </div>
       </div>
   </div>
@@ -44,8 +44,6 @@ export default {
 }
 </script>
 
-<style>
-.header {
-  height: 71px;
-}
+<style lang="scss">
+@import 'HeaderView.scss';
 </style>

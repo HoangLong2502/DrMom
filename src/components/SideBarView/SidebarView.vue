@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar w15 pr2 pt15 bg-white-1">
-                <div v-for="item in sidebar" :key="item" class="sidebar__item cursor f ai w100 pl15 pt1 pb1">
+                <div v-for="item in sidebar" :key="item" class="sidebar__item cursor f ai w100 pl15 pt075 pb075">
                     <svg viewBox="0 0 20 16" class="w10 mr15">
                         <use xlink="http://www.w3.org/2000/svg" :href="(item.id)" x="0" y="0"></use>
                     </svg>
@@ -115,40 +115,24 @@ export default {
             console.log(active);
             if(active.length > 0) {
                 active[0].classList.remove('active')
-                activeText[0].classList.remove('active-text')
+                activeText[0].classList.remove('active-text');
             }
             button.classList.add('active');
             title.classList.add('active-text');
         }
     },
+    created() {
+        setTimeout(() => {
+            if(this.$route.path == '/product') {
+                var button = document.getElementsByClassName('sidebar__item')[2];
+                button.classList.add('active');
+                console.log(button)
+            }
+        }, 10)
+    }
 }
 </script>
 
-<style scoped>
-.sidebar {
-    width: 253px !important;
-    height: calc(100vh);
-}
-.sidebar__item {
-    transition: 0.2s;
-}
-
-.sidebar__item:hover {
-    background-color: #F1ECEA;
-    border-radius: 0px 12px 12px 0px;
-}
-
-.active {
-    background-color: #F1ECEA;
-    border-radius: 0px 12px 12px 0px;
-}
-
-.active-text {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #6F382B;
-}
+<style scoped lang="scss">
+@import 'SidebarView.scss'
 </style>

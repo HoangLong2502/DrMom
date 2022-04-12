@@ -6,7 +6,7 @@
                 <use xlink="http://www.w3.org/2000/svg" href="#close" x="0" y="0"></use>
             </svg>
             <div class="align-c mt2 mb2">
-                <img src="../assets/LogoDrMom.png" alt="">
+                <img src="../../assets/LogoDrMom.png" alt="">
             </div>
             <div class="title h2 w100 mb1">Đăng nhập</div>
             <form action="">
@@ -42,7 +42,7 @@
                 <use xlink="http://www.w3.org/2000/svg" href="#close" x="0" y="0"></use>
             </svg>
             <div class="align-c mt2 mb2">
-                <img src="../assets/LogoDrMom.png" alt="">
+                <img src="../../assets/LogoDrMom.png" alt="">
             </div>
             <div class="title h2 w100 mb1">Đăng ký</div>
             <form action="">
@@ -75,7 +75,7 @@
                 <use xlink="http://www.w3.org/2000/svg" href="#close" x="0" y="0"></use>
             </svg>
             <div class="align-c pl1 pr1 mt2 mb15 border-bottom">
-                <img class="mb2" src="../assets/LogoDrMom.png" alt="">
+                <img class="mb2" src="../../assets/LogoDrMom.png" alt="">
                 <div @click="handleBack" class="f aic mb05 align-l cursor">
                     <svg class="mr025" viewBox="0 0 7 10" width="7" height="10">
                         <use xlink="http://www.w3.org/2000/svg" href="#back" x="0" y="0"></use>
@@ -124,7 +124,7 @@
                 </form>
                 <div class="complate hide">
                     <div class="f fdc aic">
-                        <img class="mb1" src="../assets/complate.png" alt="">
+                        <img class="mb1" src="../../assets/complate.png" alt="">
                         <h2 class="mb2 align-c gray">Quý khách đã tạo mật khẩu<br>mới thành công! </h2>
                         <button class="w100 h5 pt075 pb075 align-c border-radius bg-brown white">Xác nhận mã OTP</button>
                     </div> 
@@ -231,70 +231,6 @@ export default {
 }
 </script>
 
-<style>
-.auth {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-   background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(20px);
-}
-
-.login {
-    width: 378px;
-    height: 678px;
-}
-
-.register{
-    width: 378px;
-    height: 678px; 
-    display: none;
-}
-
-.forgot-password {
-    width: 378px;
-    height: 678px; 
-    display: none;
-}
-
-.visible {
-    display: none !important;
-}
-
-.step-circle {
-    width: 48px;
-    height: 48px;
-    border-radius: 100px;
-    border: 1px solid #D9DDE8;
-    z-index: 0;
-}
-
-.step-line {
-    position: absolute;
-    top: 25%;
-    left: 50px;
-    width: 272px;
-    height: 1px;
-    background: #D9DDE8;
-
-}
-
-.step-control {
-    background-color: #6F382B;
-    color: white;
-}
-
-input {
-    padding: 0.75em;
-    
-}
-
-::placeholder {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-}
+<style lang="scss">
+@import 'LoginView.scss';
 </style>

@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import HeaderView from '@/components/HeaderView.vue'
-import SidebarView from '@/components/SidebarView.vue'
-import Login from '@/components/LoginView.vue'
+import HeaderView from '@/components/HeaderView/HeaderView.vue'
+import SidebarView from '@/components/SideBarView/SidebarView.vue'
+import Login from '@/components/LoginView/LoginView.vue'
 import AddMedicalView from "@/components/CustomerView/DetailCustomer/AddMedicalPopup/AddMedicalView.vue"
 
 export default {

@@ -28,7 +28,7 @@ export default {
   props: {
     titleSelect: String,
     function: { type: Function},
-    handleInfoProduct: { type: Function},
+    handleInfo: { type: Function},
   },
   data() {
     return {
@@ -69,6 +69,15 @@ export default {
           'Tồn kho' : '30  chiếc',
           'Đơn hàng đã bán': '50 Đơn',
           'Trạng thái' : 'Dừng bán',
+        },
+        {
+          'Sản phẩm' : 'Áo thun US-UK',
+          'Loại sản phẩm' : 'Sản phẩm dịch vụ',
+          'Giá sản phẩm': '150.000 VNĐ',
+          'Giá khuyến mãi': '100.000 VNĐ',
+          'Tồn kho' : '30  chiếc',
+          'Đơn hàng đã bán': '100 Đơn',
+          'Trạng thái' : 'Dừng bán',
         }
       ],
       dataSelect: [ 
@@ -107,6 +116,15 @@ export default {
           'Tồn kho' : '30  chiếc',
           'Đơn hàng đã bán': '50 Đơn',
           'Trạng thái' : 'Dừng bán',
+        },
+        {
+          'Sản phẩm' : 'Áo thun US-UK',
+          'Loại sản phẩm' : 'Sản phẩm dịch vụ',
+          'Giá sản phẩm': '150.000 VNĐ',
+          'Giá khuyến mãi': '100.000 VNĐ',
+          'Tồn kho' : '30  chiếc',
+          'Đơn hàng đã bán': '100 Đơn',
+          'Trạng thái' : 'Dừng bán',
         }
       ],
       wid: ''
@@ -118,7 +136,7 @@ export default {
       this.handleFilter()
       setTimeout(() => {
         this.function()
-        this.handleInfoProduct()
+        this.handleInfo()
       }, 1)
     }
   },
@@ -145,7 +163,7 @@ export default {
     this.handleStatus();
     setTimeout(() => {
       this.function()
-      this.handleInfoProduct()
+
     }, 2)
   }
 }

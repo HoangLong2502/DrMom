@@ -115,7 +115,7 @@
                     <ItemList 
                     :titleSelect="selectTitle"
                     :function="handleStyle"
-                    :handleInfo="handleInfoProduct"
+                    :handleInfo="handleInfoProductFilter"
                     ></ItemList>
                 </div>
             </div>
@@ -149,7 +149,6 @@ export default {
             var button = event.target;
             button.classList.add('select');
             this.selectTitle = button.innerText;
-            this.handleInfoProduct()
         },
         handleStyle() {
             var item = document.getElementsByClassName('item-list');
@@ -169,11 +168,11 @@ export default {
         handleInfoProduct() {
             var info = document.getElementsByClassName('item-list')
             var header = document.getElementsByClassName('header')
+            header[1].children[1].classList.add('width-fix')
             for(let i = 0; i < info.length; i++) {
-                header[i].children[1].classList.add('width-fix')
                 info[i].children[1].classList.add('width-fix')
                 var title = info[i].children[1].innerText;
-                var inventory = info[i].children[5].innerText
+                var inventory = info[i].children[5].innerText;
                 info[i].children[1].innerHTML = `
                     <div class="f jcc" style="width: 200px">
                         <div class"mr05 border-radius">
@@ -190,13 +189,38 @@ export default {
                     </div>
                 `
             }
+        },
+        handleInfoProductFilter() {
+            var info = document.getElementsByClassName('item-list')
+            var header = document.getElementsByClassName('header')
+            header[1].children[1].classList.add('width-fix')
+            for(let i = 0; i < info.length; i++) {
+                info[i].children[1].classList.add('width-fix')
+                var title = info[i].children[1].children[0].children[1].children[0].innerText;
+                var inventory = info[i].children[5].innerText;
+                info[i].children[1].innerHTML = `
+                    <div class="f jcc" style="width: 200px">
+                        <div class"mr05 border-radius">
+                            <img class="border-radius" style="width: 48px; height: 48px" src="https://ss-images.saostar.vn/pc/1594175247996/avengers-endgame-thor-feature.jpg" alt="">
+                        </div>
+                        <div class="f fdc jcb ml05">
+                            <div class="blue p4 mb025">
+                                ${title}
+                            </div>
+                            <div class="h6">
+                                Tồn kho: ${inventory}
+                            </div>
+                        </div>
+                    </div>
+                `
+                console.log(info[i].children[1].children[0].children[1].children[0])
+            }
         }
     },
     created() {
         setTimeout(() => {
             // Không chạy vì đang hide trang nodata
             this.handleInfoProduct()
-            this.handleStyle()
             this.handleStyle()
             var button = document.getElementsByClassName('filter__item')[3];
             button.classList.add('select');
